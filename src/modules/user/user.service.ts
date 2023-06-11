@@ -35,7 +35,7 @@ export class UserService {
       const createdUser = await this.prisma.user.create({
         data: createUserDto,
       });
-      return createdUser;
+      return { message: 'Successfully created user!', user: createdUser };
     } catch (error) {
       if (error.code === 'P2002') {
         throw new ConflictException('Email or username already taken');
@@ -54,7 +54,7 @@ export class UserService {
         where: { id },
         data: updateUserDto,
       });
-      return updatedUser;
+      return { message: 'Successfully updated user' };
     } catch (error) {
       if (error.status === 404) throw new NotFoundException('User not found');
       throw new InternalServerErrorException('Failed to update user');
@@ -68,7 +68,7 @@ export class UserService {
         throw new NotFoundException();
       }
       const deletedUser = await this.prisma.user.delete({ where: { id } });
-      return deletedUser;
+      return { message: 'Successfully deleted user' };
     } catch (error) {
       if (error.status === 404) {
         throw new NotFoundException('User not found or already been deleted');
