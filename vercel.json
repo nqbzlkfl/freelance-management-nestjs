@@ -1,5 +1,12 @@
 {
     "version": 2,
+    "env": {
+      "ENVIRONMENT": "production",
+      "PORT": "3005",
+      "DEV_DATABASE_URL": "mysql://root:qwertyuiop123@localhost:3306/test-user-management",
+      "DATABASE_URL": "mysql://admin:password@freelance-db-1.ccerdpifzaj0.ap-southeast-1.rds.amazonaws.com/freelance-db",
+
+    },
     "builds": [
       {
         "src": "src/main.ts",
