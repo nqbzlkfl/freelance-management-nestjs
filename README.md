@@ -2,7 +2,8 @@
 
 This is a NestJS project that provides an API for managing users. It includes endpoints for retrieving all users, retrieving a single user by ID, creating a new user, updating an existing user, and deleting a user.
 
-The API documentation can be accessed via Swagger at [localhost:xxxx/_docs].
+The API documentation can be accessed via Swagger at localhost:xxxx/_docs.
+Or the live API [here](https://viridian-mackerel-wear.cyclic.app/)
 
 ## Endpoints
 
@@ -57,6 +58,8 @@ Deletes a user by their ID.
 - Parameters:
   - `id` - The ID of the user to delete
 
+
+# NestJs Part
 ## Getting Started
 
 To run this project locally, follow these steps:
