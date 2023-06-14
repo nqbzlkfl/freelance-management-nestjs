@@ -1,3 +1,71 @@
+# NestJS User API
+
+This is a NestJS project that provides an API for managing users. It includes endpoints for retrieving all users, retrieving a single user by ID, creating a new user, updating an existing user, and deleting a user.
+
+The API documentation can be accessed via Swagger at [localhost:xxxx/_docs].
+
+## Endpoints
+
+### Retrieve All Users
+
+Retrieves all users from the database.
+
+- Method: GET
+- URL: `/user`
+
+### Retrieve a Single User
+
+Retrieves a single user by their ID.
+
+- Method: GET
+- URL: `/user/:id`
+- Parameters:
+  - `id` - The ID of the user to retrieve
+
+### Create a User
+
+Creates a new user.
+
+- Method: POST
+- URL: `/user`
+- Request Body:
+  - JSON object containing user information, including:
+    - `email` - The username of the user
+    - `username` - The username of the user
+    - `name` - The username of the user
+    - `hobby` - The hobby of the user
+    - `skill_set` - The skill set of the user
+    - `phone_number` - The phone number of the user
+
+### Update a User
+
+Updates an existing user by their ID.
+
+- Method: PUT
+- URL: `/user/:id`
+- Parameters:
+  - `id` - The ID of the user to update
+- Request Body:
+  - JSON object containing updated user information, including fields to be modified
+
+### Delete a User
+
+Deletes a user by their ID.
+
+- Method: DELETE
+- URL: `/user/:id`
+- Parameters:
+  - `id` - The ID of the user to delete
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/your-username/nestjs-user-api.git
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
